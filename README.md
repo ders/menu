@@ -1,4 +1,4 @@
-# Menu
+# menu
 
 Package menu provides a data structure to represent nested menus such as
 those that might appear on a web page.
@@ -24,3 +24,5 @@ Menus hay have arbitrary depth, although recursive menus are not supported
 and will crash.
 
 Menus play well with json.Marshal (see the examples).
+
+[![GoDoc](https://godoc.org/github.com/ders/menu?status.svg)](https://godoc.org/github.com/ders/menu)
