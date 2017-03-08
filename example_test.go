@@ -10,18 +10,18 @@ import (
 func ExampleListItem_template() {
 	const snippet = `<ul>
 {{- range .Items}}
-  <li>
-  {{- if .IsList}}
-    {{.Label}}<br>
-    <ol>
-    {{- range .Items}}
-      <li><a href="{{.Action}}">{{.Label}}</a></li>
-    {{- end}}
-    </ol>
-  {{- else}}
-    <a href="{{.Action}}">{{.Label}}</a>
-  {{- end}}
-  </li>
+	<li>
+	{{- if .IsList}}
+		{{.Label}}<br>
+		<ol>
+		{{- range .Items}}
+			<li><a href="{{.Action}}">{{.Label}}</a></li>
+	{{- end}}
+		</ol>
+	{{- else}}
+		<a href="{{.Action}}">{{.Label}}</a>
+	{{- end}}
+	</li>
 {{- end}}
 </ul>`
 
@@ -42,19 +42,19 @@ func ExampleListItem_template() {
 	}
 	// Output:
 	// <ul>
-	//   <li>
-	//     <a href="/about">About</a>
-	//   </li>
-	//   <li>
-	//     Locations<br>
-	//     <ol>
-	//       <li><a href="/locations/Berlin">Berlin</a></li>
-	//       <li><a href="/locations/Seoul">Seoul</a></li>
-	//     </ol>
-	//   </li>
-	//   <li>
-	//     <a href="/faq">FAQ</a>
-	//   </li>
+	// 	<li>
+	// 		<a href="/about">About</a>
+	// 	</li>
+	// 	<li>
+	// 		Locations<br>
+	// 		<ol>
+	// 			<li><a href="/locations/Berlin">Berlin</a></li>
+	// 			<li><a href="/locations/Seoul">Seoul</a></li>
+	// 		</ol>
+	// 	</li>
+	// 	<li>
+	// 		<a href="/faq">FAQ</a>
+	// 	</li>
 	// </ul>
 }
 
